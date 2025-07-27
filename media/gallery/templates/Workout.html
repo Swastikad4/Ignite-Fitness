@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}
+WORKOUT
+{% endblock title %}
+{% block body %}
+
+
+
+
+<div class="container">
+
+    <div class="row">
+    
+    <div class="col-md-4">
+      
+    <h1>WORKOUT</h1>
+    {% comment %} Contact Us COde  {% endcomment %}
+    {% for post in posts %}
+    
+   
+    <ul class="list-group">
+        <ul class="list-group">
+            <li class="list-group-item bg-warning text-dark"><h5>Target_muscle : {{post.Target_muscle}}</h5></li>
+            <li class="list-group-item bg-warning text-dark"><h5>Exercise_1 : {{post.Exercise_1}}</h5></li>
+            <li class="list-group-item bg-warning text-dark"><h5>Exercise_2 : {{post.Exercise_2}}</h5></li>
+            <li class="list-group-item bg-warning text-dark"><h5>Exercise_3 : {{post.Exercise_3}}</h5></li>
+            <li class="list-group-item bg-warning text-dark"><h5>Exercise_4 : {{post.Exercise_4}}</h5></li>
+      
+       
+      </ul>
+      {% endfor %}
+    
+    
+    
+    
+    </div>
+    
+    <div class="col-md-8">
+
+
+      <div><Center><h2 class="display-4 mt-3"><b>Attendance Data</b></h2></Center></div>
+
+  
+      
+      <table class="table">
+        <thead class="thead-warning">
+          <tr>
+          
+            <th scope="col">Date</th>
+            <th scope="col">Login</th>
+            <th scope="col">Logout</th>
+            <th scope="col">Workout</th>
+            <th scope="col">Trained By</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {% for attend in Attendance %}
+          <tr>
+            
+            <td>{{attend.Selectdate}}</td>
+            <td>{{attend.Login}}</td>
+            <td>{{attend.Logout}}</td>
+            <td>{{attend.SelectWorkout}}</td>
+            <td>{{attend.TrainedBy}}</td>
+            
+           
+         
+            
+           
+          </tr>
+          {% endfor %}
+        
+        </tbody>
+      </table>
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    </div>
+
+
+
+
+{% endblock body %}

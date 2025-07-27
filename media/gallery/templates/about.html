@@ -1,0 +1,214 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us | IGNITEFITNESS Gym</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #ecf0f1;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* About Us Section */
+        .about-us {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .about-us-text {
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .about-us-text h2 {
+            font-size: 2.5rem;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+
+        .about-us-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #34495e;
+        }
+
+        /* Button Styling */
+        .join-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .join-button:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Image section */
+        .about-us-image {
+            max-width: 600px;
+        }
+
+        .about-us-image img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        /* Colorful Section: Our Mission, Vision, and Values */
+        .mission {
+            background: linear-gradient(to right, #16a085, #f39c12);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .mission h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .mission-items {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .mission-item {
+            max-width: 300px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .mission-item:hover {
+            transform: scale(1.05);
+        }
+
+        .mission-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .mission-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-us {
+                flex-direction: column;
+            }
+
+            .about-us-text, .about-us-image {
+                max-width: 100%;
+            }
+
+            .mission-items {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to IGNITEFITNESS Gym</h1>
+        <p>Your journey to a healthier, stronger, and happier life starts here!</p>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="about-us-text">
+            <h2>About Us</h2>
+            <p>IGNITEFITNESS Gym is more than just a gym—it's a community of fitness enthusiasts. Our mission is to help you
+                unlock your full potential through a variety of workouts, personal training, and cutting-edge equipment.</p>
+            <p>Founded in 2010, IGNITEFITNESS Gym has grown into one of the leading fitness facilities in the area. Whether
+                you're looking to build strength, lose weight, or simply maintain a healthy lifestyle, we have everything you
+                need to succeed!</p>
+
+            <!-- Button to Another Page -->
+            <a href="join" class="join-button">Join Us Now</a>
+        </div>
+        <div class="about-us-image">
+            <img src="{% static 'assets/img/abc.jpg' %}" alt="Gym Image">
+        </div>
+    </section>
+
+    <section class="mission">
+        <h2>Our Mission, Vision & Values</h2>
+        <div class="mission-items">
+            <div class="mission-item">
+                <h3>Our Mission</h3>
+                <p>To inspire and empower people of all fitness levels to live healthier, happier lives through expert
+                    training, high-end facilities, and a supportive community.</p>
+            </div>
+            <div class="mission-item">
+                <h3>Our Vision</h3>
+                <p>To be the most trusted and innovative fitness center, offering personalized fitness experiences to all
+                    who enter our doors.</p>
+            </div>
+            <div class="mission-item">
+                <h3>Our Values</h3>
+                <p>Community, growth, resilience, and passion are at the core of everything we do. We believe in inclusivity
+                    and creating a supportive environment where everyone feels welcome.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 IGNITEFITNESS Gym. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
